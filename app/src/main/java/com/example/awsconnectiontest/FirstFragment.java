@@ -14,6 +14,8 @@ import com.example.awsconnectiontest.databinding.FragmentFirstBinding;
 public class FirstFragment extends Fragment {
 
     private FragmentFirstBinding binding;
+    //**************************************************
+    private AWSManager awsManager;
 
     @Override
     public View onCreateView(
@@ -29,6 +31,9 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        //**************************************************
+        awsManager = new AWSManager(requireContext());
+
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,6 +47,9 @@ public class FirstFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+        //**************************************************
+        //awsManager.disconnectFromAwsIot();
+
     }
 
 }

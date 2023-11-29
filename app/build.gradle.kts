@@ -48,4 +48,9 @@ dependencies {
     //implementation ("software.amazon.awssdk:iot:2.21.32")
     //aws iot ANDROID sdk
     implementation ("com.amazonaws:aws-android-sdk-iot:2.73.0")
+
+    //
+    implementation ("androidx.fragment:fragment:1.3.6")
+
+
 }
